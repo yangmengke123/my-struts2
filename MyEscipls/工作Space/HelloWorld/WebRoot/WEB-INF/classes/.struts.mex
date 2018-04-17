@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="default" location="225,108" size="525,350">
+    <action name="login" location="72,64" size="150,41">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="Login_suc.jsp" />
+      </result>
+    </action>
+    <action name="op" location="72,159" size="150,62">
+      <result name="ok">
+        <resourceEdge source="ok" routing="0" target="show.jsp" />
+      </result>
+      <result name="error">
+        <resourceEdge source="error" routing="0" target="error.jsp" />
+      </result>
+    </action>
+    <action name="check" location="317,159" size="150,62">
+      <result name="suc">
+        <resourceEdge source="suc" routing="0" target="Login_success.jsp" />
+      </result>
+      <result name="error">
+        <resourceEdge source="error" routing="0" target="error.jsp" />
+      </result>
+    </action>
+    <action name="logout" location="317,274" size="150,41">
+      <result name="logout" />
+    </action>
+  </package>
+  <webResource name="Login_suc.jsp" path="/shiyan1/Login_suc.jsp" location="10,150" size="150,55" />
+  <webResource name="show.jsp" path="/shiyan1_compute/show.jsp" location="290,500" size="150,55" />
+  <webResource name="error.jsp" path="/shiyan1_compute/error.jsp" location="10,255" size="150,55" />
+  <webResource name="Login_success.jsp" path="/Login_success.jsp" location="815,255" size="150,55" />
+  <webResource name="error.jsp" path="/error.jsp" location="535,10" size="150,55" />
+</Struts2Diagram>
+

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+    "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+<constant name="struts.custom.i18n.resources" value="baseName"/>
+
+	<package name="default" extends='struts-default'>
+		<action name="login" class="hello.world">
+			<result name="success">/shiyan1/Login_suc.jsp</result>
+		</action>
+		<action name="op" class="hello.op">
+			<result name="ok">/shiyan1_compute/show.jsp</result>
+			<result name="error">/shiyan1_compute/error.jsp</result>
+		</action>
+		
+		<action name="check" class="check.Check">
+			<result name="suc">/入门/Login_success.jsp</result>
+			<result name="error">/入门/error.jsp</result>
+		</action>
+		<action name="logout" class="check.logout">
+			<result name="logout">/入门/MyJsp.jsp</result>
+		</action>
+		
+		<action name="conn" class="check.checkInLogin">
+			<result name="success">/hsqldb/show.jsp</result>
+			<result name="error">/hsqldb/error.jsp</result>
+		</action>
+		<action name="getall" class="check.checkInDb">
+			<result name="all">/hsqldb/showAll.jsp</result>
+		</action>
+		
+		<action name="checkLogin" class="check.CheckLoginByStu">
+			<result>/MyJsp.jsp</result>
+			<result name="input">/CheckByStu.jsp</result>
+		</action>
+		
+		<action name="checkByI18n" class="i18n.Info">
+			<result>/Show_I18n.jsp</result>
+			<result name="input">/CheckByStu.jsp</result>
+		</action>
+		
+		<action name="i18n" class="i18n.LoginI18N">
+			<result>/Show_I18n.jsp</result>
+			<result name="input,fail">/LoginByI18N.jsp</result>
+		</action>
+		
+	</package>
+</struts> 
